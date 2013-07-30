@@ -1,0 +1,14 @@
+<h1>What meal do you want to eat?</h1>
+<h2 id="meal_holder"></h2>
+
+<button class="meal_teller">Tell the meal!</button>
+
+
+<script type='text/javascript'>
+ $('.meal_teller').on('click', function(){
+    var meals = <%= @meals %>
+    var meal = meals[Math.floor(Math.random() * meals.length)];
+    $('h1').text(meal);
+  });
+</script>
+
